@@ -1,1 +1,1 @@
-web: streamlit run app.py --server.port=$PORT --server.address=0.0.0.0
+web: python keep_alive.py & streamlit run app.py --server.port=$PORT --server.address=0.0.0.0
