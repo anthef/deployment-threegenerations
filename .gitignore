@@ -1,0 +1,37 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Environment variables
+.env
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Dataset files (optional, if you want to exclude them from git)
+# data/*.xlsx
+# data/*.csv
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Streamlit specific
+.streamlit/
+
+# Log files
+*.log
