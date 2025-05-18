@@ -31,7 +31,7 @@ page = st.sidebar.radio(
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_excel("data/Dataset Online Retail.xlsx")
+        df = pd.read_csv("data/retail_data.csv")
         
         # Data preprocessing
         df['InvoiceNo'] = df['InvoiceNo'].astype('category')
