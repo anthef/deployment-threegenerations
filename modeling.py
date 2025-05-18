@@ -216,16 +216,10 @@ def analyze_product_seasonality(df):
     if 'Quarter' not in df.columns:
         df['Quarter'] = df['InvoiceDate'].dt.quarter
     
-    # Monthly sales by category
     monthly_category = df.groupby(['Month', 'Category'])['TotalSales'].sum().reset_index()
-    
-    # Day of week patterns
     dow_sales = df.groupby('DayOfWeek')['TotalSales'].sum().reset_index()
-    
-    # Quarterly trends
     quarterly_sales = df.groupby(['Quarter', 'Category'])['TotalSales'].sum().reset_index()
     
-    # Seasonal top products
     seasonal_top_products = {}
     for quarter in df['Quarter'].unique():
         quarter_df = df[df['Quarter'] == quarter]
